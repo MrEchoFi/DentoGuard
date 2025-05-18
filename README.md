@@ -20,10 +20,10 @@ https://github.com/user-attachments/assets/716a664e-bb0d-44e1-9f82-9add6caacfd0
    https://github.com/MrEchoFi & https://github.com/369emon
 # # installation:
      git clone https://github.com/Ebwer/DentoGuard.git  
-     or,  git clone https://github.com/MrEchoFi/DentoGard.git
+     or,  git clone https://github.com/MrEchoFi/DentoGuard.git
  
      cd DentoGuard
-     or,  cd DentoGard
+     or,  cd DentoGuard
 
     pip install -r requirements.txt
     //note: if requirements.txt not working then install the credentials manually
