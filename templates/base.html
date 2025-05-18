@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>{% block title %}DentoGuard{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='animations.css') }}">
+</head><body>
+
+  <nav>
+    <a href="{{ url_for('index') }}"align="left">DentoGuard</a>
+     
+    <a href="{{ url_for('index') }}"></a>
+    {% if current_user.is_authenticated %}
+      <a href="{{ url_for('upload') }}">Upload</a>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="{{ url_for('signup') }}">Signup</a>
+    {% endif %}
+    <a href="{{ url_for('about') }}">About</a>
+    
+  </nav>
+
+  <div class="flash-container">
+    {% for cat,msg in get_flashed_messages(with_categories=true) %}
+      <div class="flash flash-{{cat}}">{{ msg }}</div>
+    {% endfor %}
+  </div>
+
+  <div class="content">{% block content %}{% endblock %}</div>
+
+    <footer>
+        <p>&copy; 2025 DentoGuard. All rights reserved.</p>
+        <p>Powered by Ebwer</p>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Result{% endblock %}
+{% block content %}
+<div class="box animate-box result">
+  <h2 class="animate-title">Analysis Result</h2>
+  <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Tooth">
+  <p><strong>Infection:</strong> {{ infection }}</p>
+  <p><strong>Damage:</strong> {{ damage }}%</p>
+  <p><strong>Recommendation:</strong> {{ recommendation }}</p>
+  <button onclick="location.href='{{ url_for('upload') }}'">Analyze Other</button>
+</div>
+{% endblock %}

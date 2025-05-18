@@ -1,0 +1,6 @@
+healthy: Your tooth appears healthy. Keep up brushing and flossing, and visit a dentist regularly.
+cavities: Early-stage cavities detected. Brush twice daily with fluoride toothpaste and schedule a filling.
+enamel erosion: Signs of enamel erosion. Use a remineralizing toothpaste and see your dentist for protective treatment.
+gum infection: Gum infection indicators. Gently floss daily, use antiseptic mouthwash, and consult a periodontist if needed.
+abscess: Possible abscess detected. Seek an urgent dental appointment for antibiotics and drainage.
+periodontal disease: Advanced periodontal disease signs. Maintain rigorous oral hygiene and visit a specialist.

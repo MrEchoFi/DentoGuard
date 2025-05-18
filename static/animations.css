@@ -1,0 +1,13 @@
+@keyframes neon-flicker {
+  0%,19%,21%,23%,25%,54%,56%,100% {
+    text-shadow:0 0 4px #0ff,0 0 10px #0ff,0 0 20px #0ff;
+  }
+  20%,24%,55% { text-shadow: none; }
+}
+.animate-title { animation: neon-flicker 3s infinite; }
+
+@keyframes pulse-glow {
+  0%,100% { box-shadow:0 0 10px #0ff; }
+  50%      { box-shadow:0 0 20px #0ff; }
+}
+.animate-box { animation: pulse-glow 2s infinite ease-in-out; }

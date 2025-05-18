@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Upload{% endblock %}
+{% block content %}
+<div class="box animate-box">
+  <h2 class="animate-title">Upload Tooth Image</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required>
+    <button type="submit">Analyze</button>
+  </form>
+</div>
+{% endblock %}
