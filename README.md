@@ -16,9 +16,12 @@
 https://github.com/user-attachments/assets/716a664e-bb0d-44e1-9f82-9add6caacfd0
 
 # Contributors:
-  Ebwer brothers
+  Ebwer brothers-
    https://github.com/MrEchoFi & https://github.com/369emon
+
+   </div>
 # # installation:
+
      git clone https://github.com/Ebwer/DentoGuard.git  
      or,  git clone https://github.com/MrEchoFi/DentoGuard.git
  
@@ -30,4 +33,4 @@ https://github.com/user-attachments/assets/716a664e-bb0d-44e1-9f82-9add6caacfd0
 
     python app.py
 
-~// this Ai App contains our json based dataset, unique algorithm; that's why anyone can able to run this in low powered CPU, GPU system devices.  
+~/ This Ai App contains our json based dataset, unique algorithm; that's why anyone can able to run this in low powered CPU, GPU system devices.  
