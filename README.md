@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://static.vecteezy.com/system/resources/thumbnails/027/809/549/small_2x/tooth-with-blue-background-3d-rendering-photo.jpg" alt="logo" width="200" height="auto" />
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/027/809/549/small_2x/tooth-with-blue-background-3d-rendering-photo.jpg" alt="logo" width="300" height="auto" />
   <h1>Dento_Guard</h1>
    
   <p>
