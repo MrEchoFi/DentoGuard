@@ -23,7 +23,12 @@ https://github.com/user-attachments/assets/6f1cbb07-6184-41de-85be-39f19568c682
   Ebwer brothers-
    https://github.com/MrEchoFi & https://github.com/369emon
 
+
    </div>
+
+# How to reach me:
+  http://mrechofi.github.io/Tanjib_portfolio_website/   
+  https://369emon.github.io/Emon-s_portfolio/
 # # installation:
 
      git clone https://github.com/Ebwer/DentoGuard.git  
