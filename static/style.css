@@ -1,4 +1,4 @@
-/* Force full‑dark background everywhere */
+
 html, body {
   margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -15,7 +15,7 @@ html, body {
   background-attachment: fixed;
 }
 
-/* Navbar */
+
 nav {
   background: #111;
   padding: 1rem;
@@ -38,7 +38,7 @@ nav a::after {
 nav a:hover::after { width: 100%; }
 nav a:hover { color: #0cc; }
 
-/* Flash messages */
+
 .flash-container {
   width: 90%;
   max-width: 400px;
@@ -55,7 +55,7 @@ nav a:hover { color: #0cc; }
 .flash-error   { background: rgba(255,0,0,0.1); color: #f00; }
 .flash-info    { background: rgba(0,255,255,0.1); color: #0ff; }
 
-/* Center content */
+
 .content {
   flex: 1;
   display: flex;
@@ -64,7 +64,7 @@ nav a:hover { color: #0cc; }
   padding: 2rem;
 }
 
-/* Box style */
+
 .box {
   background: rgba(20,20,20,0.95);
   padding: 2rem;
@@ -76,14 +76,14 @@ nav a:hover { color: #0cc; }
   text-align: center;
 }
 
-/* Headings */
+
 .box h2 {
   color: #0ff;
   text-shadow: 0 0 6px #0ff;
   margin-bottom: 1.5rem;
 }
 
-/* Inputs & Buttons */
+
 input, button {
   width: 100%;
   padding: .75rem;
@@ -116,7 +116,7 @@ button::before {
 }
 button:hover::before { left:200%; }
 
-/* Result image */
+
 .result img {
   max-width: 100%;
   border: 2px solid #0ff;
@@ -125,11 +125,11 @@ button:hover::before { left:200%; }
   margin-bottom: 1rem;
 }
 
-/* Footer (stick at bottom) */
+
 footer {
   text-align: center;
   padding: 1rem;
-  /*background: #111;*/
+ 
   color: #757575;
   font-size: 14px;
   margin: 0;

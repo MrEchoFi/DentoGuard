@@ -18,17 +18,17 @@ from werkzeug.utils import secure_filename
 from PIL import Image
 import cv2, numpy as np
 
-# --- Configuration ---
+
 app = Flask(__name__)
 app.secret_key = 'tsecret777'
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 ALLOWED_EXT = {'png','jpg','jpeg','gif'}
 
-# --- Flask-Login setup ---
+
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
-# In-memory users
+
 _users = {}
 
 class User(UserMixin):
@@ -50,7 +50,7 @@ class User(UserMixin):
 def load_user(username):
     return User.get(username)
 
-# --- Load infection recommendations ---
+
 def load_infection_types():
     d = {}
     with open('infection_types.txt') as f:
@@ -62,7 +62,7 @@ def load_infection_types():
 
 infection_data = load_infection_types()
 
-# --- Helpers ---
+
 def allowed_file(fn):
     return '.' in fn and fn.rsplit('.',1)[1].lower() in ALLOWED_EXT
 
@@ -90,12 +90,7 @@ def allowed_file(fn):
     return (color_ratio > 0.05 and edge_ratio > 0.01 and area_ratio > 0.02) """
 
 def is_tooth_image(image_path):
-    """
-    Three‐stage heuristic—accept if at least TWO of:
-      1) Grid‐sample bright, low‐saturation pixels → white_ratio
-      2) Bright‐pixel bounding‐box area → box_area_ratio
-      3) Edge density via Canny → edge_ratio
-    """
+  
     img_cv = cv2.imread(image_path)
     if img_cv is None:
         return False
@@ -114,17 +109,17 @@ def is_tooth_image(image_path):
                 white += 1
     white_ratio = (white / total) if total else 0
 
-    # 2) Bright-pixel bounding box
+    
     gray = cv2.cvtColor(img_cv, cv2.COLOR_BGR2GRAY)
     _, mask = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY)
     x0, y0, w0, h0 = cv2.boundingRect(mask)
     box_area_ratio = ((w0 * h0) / (w * h)) if (w * h) else 0
 
-    # 3) Edge density
+   
     edges = cv2.Canny(gray, 100, 200)
     edge_ratio = np.count_nonzero(edges) / edges.size
 
-    # Conditions
+  
     white_cond = (0.01 < white_ratio < 0.8)
     box_cond   = (box_area_ratio > 0.015)
     edge_cond  = (edge_ratio < 0.15)
@@ -138,7 +133,7 @@ def detect_infection(path):
     damage = round(dark/total*100,2)
 
     """This is the Secondary Error Handling for the dataset which can predict infection and u can say why we add this
-    because we build this dataset by our own in short time and human can mistake that is why when dataset can not predict correctly then this Error handling function will be used"""
+    because we build this dataset by our own in short time and human can mistake that is why when dataset can not predict correctly & facing conflict then this Error handling function will be used"""
 
     if damage < 10: inf='healthy'
     elif damage < 30: inf='cavities'
@@ -149,7 +144,7 @@ def detect_infection(path):
 
     return inf, damage, infection_data.get(inf, 'No recommendation available.')
 
-# --- Routes ---
+
 @app.route('/signup', methods=['GET','POST'])
 def signup():
     if request.method=='POST':

@@ -1,4 +1,4 @@
-// Example: fade in result box
+
 document.addEventListener('DOMContentLoaded', () => {
   const box = document.querySelector('.result-box');
   if (box) {
@@ -10,4 +10,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// You can add progress-bar, upload-spinner, etc. here

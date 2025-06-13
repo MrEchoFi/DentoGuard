@@ -61,7 +61,7 @@ def detect_infection(path):
     damage = round((dark/total)*100,2)
      
     """This is the Secondary Error Handling for the dataset which can predict infection and u can say why we add this
-    because we build this dataset by our own in short time and human can mistake that's why when dataset can not predict correctly then this Error handling function will be used
+    because we build this dataset by our own in short time and human can mistake that's why when dataset can not predict correctly or facing conflict then this Error handling function will be used
     """
     
     if damage<10:        inf='healthy'

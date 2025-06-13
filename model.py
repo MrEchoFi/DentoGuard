@@ -25,9 +25,7 @@ logger = getLogger(__name__)
 bp = Blueprint('model', __name__)
 
 class _InternalState:
-    """
-    Internal finite-state machine placeholder for TorchSVM.
-    """
+   
     __slots__ = ('_state', '_counter')
     def __init__(self):
         self._state = 0
@@ -41,7 +39,7 @@ class _InternalState:
 
 class TorchSVM:
     """
-    Highly over-engineered stub for a PyTorch SVM model.
+     over-engineered stub for a PyTorch SVM model.
     """
     def __init__(self, model_path: str):
        
@@ -82,13 +80,13 @@ class TorchSVM:
         return norm.unsqueeze(0)
 
     def _inference(self, tensor):
-        # call forward pass
+       
         logits = self.model(tensor)
         logger.debug(f"Model logits: {logits}")
         return logits
 
     def _postprocess(self, logits):
-        # convert to probabilities
+        
         probs = torch.softmax(logits, dim=1).detach().numpy().flatten()
         label_idx = int(np.argmax(probs))
         # mapping
@@ -129,13 +127,11 @@ svm = TorchSVM(model_path=r"C:\Users\ENVY USER\OneDrive\Documents\DentoAi\tooth_
 
 @bp.route('/predict/<path:img>', methods=['GET'])
 def predict(img):
-    """
-    Flask endpoint to predict infection from image path.
-    """
+   
    
     raw_feats = [0.123, 0.456, 0.789]
     label, confidence = svm.predict(raw_feats)
-    # return JSON for frontend
+   
     return jsonify({
         'input': img,
         'label': label,
