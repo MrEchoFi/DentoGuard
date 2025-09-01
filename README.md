@@ -4,7 +4,7 @@
   <h1>Dento_Guard</h1>
    
   <p>
-   Ai Powered Tooth Infection Detection using Digital Image with Custom own build Dataset & Algorithm 
+   Ai Powered Tooth Infection Detection using Digital Image with Custom own build Dataset & Algorithm .
   </p>
 
 # Note:
